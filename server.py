@@ -13,3 +13,12 @@ def about():
 @app.route("/api/data")
 def api_data():
     return jsonify({'users': ['john', 'peter', 'mike']})
+
+@app.route("/projects")
+def projects():
+    return render_template('projects.html')
+
+@app.route("/news")
+def news():
+    news_items = ['Opened new store', 'Cooperation with MagicCo', 'Raised $1M funding']
+    return render_template('news.html', news=news_items)

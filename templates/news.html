@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}News{% endblock %}
+
+{% block content %}
+    <h1>NEWS</h1>
+
+    {% for n in news %}
+        <div><b>{{ n }}</b></div>
+    {% endfor %}
+{% endblock %}
